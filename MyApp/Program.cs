@@ -32,7 +32,7 @@ namespace MyApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Random random = new Random();
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\sasha\\source\\repos\\Новая папка\\MyApp\\MyApp\\DB.mdf\";Integrated Security=True;Connect Timeout=30";
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"\\MyApp\\MyApp\\DB.mdf\";Integrated Security=True;Connect Timeout=30";
             string fullName, gender, surname;
             DateTime birthday;
             int randomLastName, randomFirstName, randomSecondNames, day, month, year;
@@ -96,7 +96,7 @@ namespace MyApp
                     case "DBOutputAll":
                         Application.Run(new DBOutputAll());
                         break;
-                    case "AvtoAdd":
+                    case "AutoAdd":
                         for (int i = 0; i < 1000000; i++)
                         {
                             randomLastName = random.Next(0, 10);
@@ -138,7 +138,7 @@ namespace MyApp
                         }
                         MessageBox.Show("Сотрудники добавлены.");
                         break;
-                    case "AvtoAddF":
+                    case "AutoAddF":
                         for (int i = 0; i < 100; i++)
                         {
                             var filteredLastNames = lastNames.Where(lastName => lastName.StartsWith("F")).ToArray();
